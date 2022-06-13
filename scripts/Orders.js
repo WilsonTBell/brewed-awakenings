@@ -47,3 +47,12 @@ export const Orders = () => {
     return html
 }
 
+export const employeeNumberOrders = (employee) =>{
+    let orderNumber = 0
+    for (const order of orders) {
+        if(employee.id === order.employeeId){
+          orderNumber ++;
+        }
+    }
+    return orderNumber
+}
